@@ -98,6 +98,7 @@
     "continue_with_github": "Tiếp tục bằng GitHub",
     "continue_with_google": "Tiếp tục bằng Google",
     "continue_with_microsoft": "Tiếp tục bằng Microsoft",
+    "continue_with_oidc": "Tiếp tục bằng OIDC",
     "email": "Email",
     "logged_out": "Đã đăng xuất",
     "login": "Đăng nhập",

@@ -187,6 +187,7 @@ Help us to translate Hoppscotch. Please read [`TRANSLATIONS`](TRANSLATIONS.md) f
 - GitHub
 - Google
 - Microsoft
+- OIDC
 - Email
 - SSO (Single Sign-On)[^EE]
 
