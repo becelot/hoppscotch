@@ -184,6 +184,9 @@ importers:
       passport-microsoft:
         specifier: ^1.0.0
         version: 1.0.0
+      passport-openidconnect:
+        specifier: ^0.1.1
+        version: 0.1.1
       prisma:
         specifier: ^4.16.2
         version: 4.16.2
@@ -248,6 +251,9 @@ importers:
       '@types/passport-microsoft':
         specifier: ^0.0.0
         version: 0.0.0
+      '@types/passport-openidconnect':
+        specifier: ^0.1.0
+        version: 0.1.0
       '@types/supertest':
         specifier: ^2.0.12
         version: 2.0.12
@@ -1339,7 +1345,7 @@ importers:
         version: 0.13.1(vite@3.2.4)(workbox-build@6.6.0)(workbox-window@6.6.0)
       vite-plugin-vue-layouts:
         specifier: ^0.7.0
-        version: 0.7.0(vite@3.2.4)(vue-router@4.1.0)(vue@3.2.45)
+        version: 0.7.0(vite@3.2.4)(vue-router@4.2.4)(vue@3.2.45)
       vite-plugin-windicss:
         specifier: ^1.8.8
         version: 1.8.8(vite@3.2.4)
@@ -6062,8 +6068,8 @@ packages:
       vue-i18n:
         optional: true
     dependencies:
-      '@intlify/message-compiler': 9.3.0-beta.26
-      '@intlify/shared': 9.3.0-beta.26
+      '@intlify/message-compiler': 9.4.1
+      '@intlify/shared': 9.4.1
       jsonc-eslint-parser: 1.4.1
       source-map: 0.6.1
       vue-i18n: 9.2.2(vue@3.3.4)
@@ -6124,11 +6130,11 @@ packages:
       source-map-js: 1.0.2
     dev: true
 
-  /@intlify/message-compiler@9.3.0-beta.26:
-    resolution: {integrity: sha512-qsfU6Lca7mI80ts1vgy+pfNvGm2gHy0nERpT/K1GYgnECmsKwud0e8SG1PPxKPEHKa5Mdngzs4pS7X1wH0SCGA==}
+  /@intlify/message-compiler@9.4.1:
+    resolution: {integrity: sha512-aN2N+dUx320108QhH51Ycd2LEpZ+NKbzyQ2kjjhqMcxhHdxtOnkgdx+MDBhOy/CObwBmhC3Nygzc6hNlfKvPNw==}
     engines: {node: '>= 16'}
     dependencies:
-      '@intlify/shared': 9.3.0-beta.26
+      '@intlify/shared': 9.4.1
       source-map-js: 1.0.2
     dev: true
 
@@ -6141,8 +6147,8 @@ packages:
     engines: {node: '>= 16'}
     dev: true
 
-  /@intlify/shared@9.3.0-beta.26:
-    resolution: {integrity: sha512-RpCtfSYIg4tSskrazTr5+WCHyw6qpgwdIxC+x3nCnrPGxyk+en9FoSbadVfx/w7uDTdyhKslEw4d2+qhNc0s4Q==}
+  /@intlify/shared@9.4.1:
+    resolution: {integrity: sha512-A51elBmZWf1FS80inf/32diO9DeXoqg9GR9aUDHFcfHoNDuT46Q+fpPOdj8jiJnSHSBh8E1E+6qWRhAZXdK3Ng==}
     engines: {node: '>= 16'}
     dev: true
 
@@ -6162,7 +6168,7 @@ packages:
         optional: true
     dependencies:
       '@intlify/bundle-utils': 7.0.0
-      '@intlify/shared': 9.3.0-beta.26
+      '@intlify/shared': 9.4.1
       '@rollup/pluginutils': 4.2.1
       debug: 4.3.4(supports-color@9.2.2)
       fast-glob: 3.2.11
@@ -6189,7 +6195,7 @@ packages:
         optional: true
     dependencies:
       '@intlify/bundle-utils': 3.4.0(vue-i18n@9.2.2)
-      '@intlify/shared': 9.3.0-beta.26
+      '@intlify/shared': 9.4.1
       '@rollup/pluginutils': 4.2.1
       debug: 4.3.4(supports-color@9.2.2)
       fast-glob: 3.3.1
@@ -6217,7 +6223,7 @@ packages:
         optional: true
     dependencies:
       '@intlify/bundle-utils': 3.4.0(vue-i18n@9.2.2)
-      '@intlify/shared': 9.3.0-beta.26
+      '@intlify/shared': 9.4.1
       '@rollup/pluginutils': 4.2.1
       debug: 4.3.4(supports-color@9.2.2)
       fast-glob: 3.3.1
@@ -6244,7 +6250,7 @@ packages:
         optional: true
     dependencies:
       '@intlify/bundle-utils': 3.4.0(vue-i18n@9.2.2)
-      '@intlify/shared': 9.3.0-beta.26
+      '@intlify/shared': 9.4.1
       '@rollup/pluginutils': 4.2.1
       debug: 4.3.4(supports-color@9.2.2)
       fast-glob: 3.3.1
@@ -8114,7 +8120,6 @@ packages:
       '@types/express-serve-static-core': 4.17.31
       '@types/qs': 6.9.7
       '@types/serve-static': 1.15.0
-    dev: false
 
   /@types/flexsearch@0.7.3:
     resolution: {integrity: sha512-HXwADeHEP4exXkCIwy2n1+i0f1ilP1ETQOH5KDOugjkTFZPntWo0Gr8stZOaebkxsdx+k0X/K6obU/+it07ocg==}
@@ -8293,7 +8298,7 @@ packages:
   /@types/oauth@0.9.1:
     resolution: {integrity: sha512-a1iY62/a3yhZ7qH7cNUsxoI3U/0Fe9+RnuFrpTKr+0WVOzbKlSLojShCKe20aOD1Sppv+i8Zlq0pLDuTJnwS4A==}
     dependencies:
-      '@types/node': 18.16.17
+      '@types/node': 18.17.6
     dev: true
 
   /@types/object-path@0.11.1:
@@ -8345,6 +8350,15 @@ packages:
       '@types/passport': 1.0.11
     dev: true
 
+  /@types/passport-openidconnect@0.1.0:
+    resolution: {integrity: sha512-D1wdXZNS0Uu20BZ+NSRKT2bHlvP0y3aL5vdLLBM7gsP3GLeGVmqaA1ytGNMID5sB3nDJSqbI4Vfm1rpSBbjQOA==}
+    dependencies:
+      '@types/express': 4.17.16
+      '@types/oauth': 0.9.1
+      '@types/passport': 1.0.11
+      '@types/passport-strategy': 0.2.35
+    dev: true
+
   /@types/passport-strategy@0.2.35:
     resolution: {integrity: sha512-o5D19Jy2XPFoX2rKApykY15et3Apgax00RRLf0RUotPDUsYrQa7x4howLYr9El2mlUApHmCMv5CZ1IXqKFQ2+g==}
     dependencies:
@@ -8355,7 +8369,7 @@ packages:
   /@types/passport@1.0.11:
     resolution: {integrity: sha512-pz1cx9ptZvozyGKKKIPLcVDVHwae4hrH5d6g5J+DkMRRjR3cVETb4jMabhXAUbg3Ov7T22nFHEgaK2jj+5CBpw==}
     dependencies:
-      '@types/express': 4.17.14
+      '@types/express': 4.17.16
     dev: true
 
   /@types/postman-collection@3.5.7:
@@ -19096,6 +19110,14 @@ packages:
       utils-merge: 1.0.1
     dev: false
 
+  /passport-openidconnect@0.1.1:
+    resolution: {integrity: sha512-r0QJiWEzwCg2MeCIXVP5G6YxVRqnEsZ2HpgKRthZ9AiQHJrgGUytXpsdcGF9BRwd3yMrEesb/uG/Yxb86rrY0g==}
+    engines: {node: '>= 0.6.0'}
+    dependencies:
+      oauth: 0.9.15
+      passport-strategy: 1.0.0
+    dev: false
+
   /passport-strategy@1.0.0:
     resolution: {integrity: sha512-CB97UUvDKJde2V0KDWWB3lyf6PC3FaZP7YxZ2G8OAtn9p4HI9j9JLP9qjOGZFvyl8uwNT8qM+hGnz/n16NI7oA==}
     engines: {node: '>= 0.4.0'}
@@ -23071,6 +23093,23 @@ packages:
       - supports-color
     dev: true
 
+  /vite-plugin-vue-layouts@0.7.0(vite@3.2.4)(vue-router@4.2.4)(vue@3.2.45):
+    resolution: {integrity: sha512-k5XDmRNFo4M/GmUjhbRXj2WmJiFcGoVI8l/uZ72RHyRDQr4wE/6Zq/KFq0lqXomWQxTSzakQRUswzNwtvZLE8A==}
+    peerDependencies:
+      vite: ^2.5.0 || ^3.0.0-0
+      vue: ^2.6.12 || ^3.2.4
+      vue-router: ^3.5.1 || ^ 4.0.11
+    dependencies:
+      '@vue/compiler-sfc': 3.3.4
+      debug: 4.3.4(supports-color@9.2.2)
+      fast-glob: 3.3.1
+      vite: 3.2.4(@types/node@17.0.45)(sass@1.53.0)(terser@5.19.2)
+      vue: 3.2.45
+      vue-router: 4.2.4(vue@3.2.45)
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
+
   /vite-plugin-vue-layouts@0.8.0(vite@4.4.9)(vue-router@4.2.4)(vue@3.3.4):
     resolution: {integrity: sha512-UZW2nSV2LraTSe7gsAL46hfdi7a0X1RvkGGoJVtA2O8beu7anzpXFwQLou8+kHy31CzVycT4gIPySBsHhtBN5g==}
     peerDependencies:
@@ -23773,6 +23812,15 @@ packages:
     dependencies:
       '@vue/devtools-api': 6.5.0
       vue: 3.2.45
+
+  /vue-router@4.2.4(vue@3.2.45):
+    resolution: {integrity: sha512-9PISkmaCO02OzPVOMq2w82ilty6+xJmQrarYZDkjZBfl4RvYAlt4PKnEX21oW4KTtWfa9OuO/b3qk1Od3AEdCQ==}
+    peerDependencies:
+      vue: ^3.2.0
+    dependencies:
+      '@vue/devtools-api': 6.5.0
+      vue: 3.2.45
+    dev: true
 
   /vue-router@4.2.4(vue@3.3.4):
     resolution: {integrity: sha512-9PISkmaCO02OzPVOMq2w82ilty6+xJmQrarYZDkjZBfl4RvYAlt4PKnEX21oW4KTtWfa9OuO/b3qk1Od3AEdCQ==}
